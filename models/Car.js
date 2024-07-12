@@ -6,59 +6,30 @@ class Car extends Model {}
 
 Car.init(
   {
-    vin: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    make: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    model: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    year: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    mileage: {
-      type: DataTypes.INTEGER,
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    
+    category: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
-    condition: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    transmission: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fuel_type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    exterior_color: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    interior_color: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+  
     description: {
       type: DataTypes.TEXT,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
+  
     user_id: {
       type: DataTypes.INTEGER,
       references: {
