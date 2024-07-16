@@ -1,5 +1,10 @@
-module.exports = (sequelize, DataTypes) => {
-    const Comment = sequelize.define('Comment', {
+
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+const Car = require ('./Car');
+class Comment extends Model {}
+
+Comment.init({
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -22,7 +27,10 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       }
+    }, {
+      sequelize,
+      modelName: 'Comment'
     });
+
+    module.exports = Comment;
   
-    return Comment;
-  };
