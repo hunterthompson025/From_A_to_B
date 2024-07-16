@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>From A to B</title>
+    <link rel="stylesheet" href="./assets/jass.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png">
+</head>
+
+<body>
+    <header class="bd-header">
+        <a class="atob-header" href="{{home}}">
+            From A to B
+        </a>
+        <div class="tabs is-centered">
+            <ul>
+                <li class="is-active"><a>Home</a></li>
+                <li><a>Coupes</a></li>
+                <li><a>Sedans</a></li>
+                <li><a>Trucks & SUVs</a></li>
+                <!-- Render login or logout links -->
+                {{#if logged_in}}
+                <li><a href="{{profile}}">Profile</a></li>
+                <li><a href="{{logout}}">Logout</a></li>
+                {{else}}
+                <li><a href="{{login}}">Login</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </header>
+
+    <!-- Render script for logged in user -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}} 
+</body>
+</html> 
