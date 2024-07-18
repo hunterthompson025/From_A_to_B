@@ -30,7 +30,7 @@ Car.init(
     },
 
     category_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "category",
         key: "id",
