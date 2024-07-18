@@ -1,17 +1,13 @@
-const { Category } = require('../models');
 
-const categoryData = [
+ [
     {
-        category_name: 'Cars'
+        "category_name": "Cars"
     },
     {
-        category_name: 'SUVs'
+        "category_name": "SUVs"
     },
     {
-        category_name: 'Trucks'
-    },
-];
+        "category_name": "Trucks"
+    }
+]
 
-const seedCategories = () => Category.bulkCreate(categoryData);
-
-module.exports = seedCategories;
