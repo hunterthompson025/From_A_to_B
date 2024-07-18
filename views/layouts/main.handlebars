@@ -25,10 +25,11 @@
                 <li><a>Trucks & SUVs</a></li>
                 <!-- Render login or logout links -->
                 {{#if logged_in}}
-                <li><a href="{{profile}}">Profile</a></li>
-                <li><a href="{{logout}}">Logout</a></li>
+
+                <li><a href="/profile">Profile</a></li>
+                <li><button class="no-button" id="logout-button">Logout</button></li>
                 {{else}}
-                <li><a href="{{login}}">Login</a></li>
+                <li><a href="/login">Login</a></li>
                 {{/if}}
             </ul>
         </div>
