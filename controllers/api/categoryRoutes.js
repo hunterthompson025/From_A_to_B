@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
   //add a switch statement to determine what page to render might also work
    switch (req.params.id) {
     case '1':
-        return res.render('/coupes', {
+        return res.render('/car', {
         cars,
         logged_in: req.session.logged_in });
       case '2':
@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
         cars,
         logged_in: req.session.logged_in });;
      case '3':
-        return res.render('/sedans', {
+        return res.render('/trucks', {
         cars,
         logged_in: req.session.logged_in });
     }} catch (err) {
