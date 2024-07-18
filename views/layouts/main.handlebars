@@ -36,9 +36,9 @@
                             <!-- Render login or logout links -->
                             {{#if logged_in}}
                             <a class="navbar-item" href="/profile">Profile</a>
-                            <a class="navbar-item" href="/logout">Logout</a>
+                            <a class="navbar-item" href="/logout" id="logout">Logout</a>
                             {{else}}
-                            <a class="navbar-item" href="/login">Login</a>
+                            <a class="navbar-item" href="/login" id="login">Login</a>
                             {{/if}}
                         </div>
                     </div>
