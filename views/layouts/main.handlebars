@@ -13,31 +13,50 @@
 </head>
 
 <body>
-    <header class="bd-header">
-        <a class="atob-header" href="{{home}}">
-            From A to B
-        </a>
-        <div class="tabs is-centered">
-            <ul>
-                <li class="is-active"><a>Home</a></li>
-                <li><a>Coupes</a></li>
-                <li><a>Sedans</a></li>
-                <li><a>Trucks & SUVs</a></li>
-                <!-- Render login or logout links -->
-                {{#if logged_in}}
+    <div class="container is-fullheight">
+        <header class="hero is-primary is-small">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="/home">
+                                <img src="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png" alt="pepe">
+                            </a>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active" href="/home">Home</a>
+                            <a class="navbar-item" href="/cars">Cars</a>
+                            <a class="navbar-item" href="/trucks">Trucks</a>
+                            <a class="navbar-item" href="/suvs">SUVs</a>
+                            <!-- Render login or logout links -->
+                            {{#if logged_in}}
+                            <a class="navbar-item" href="/profile">Profile</a>
+                            <a class="navbar-item" href="/logout">Logout</a>
+                            {{else}}
+                            <a class="navbar-item" href="/login">Login</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="container is-flex is-full">
+            <!-- Render sublayout -->
+            {{{body}}}
+        </main>
+        <footer>
 
-                <li><a href="/profile">Profile</a></li>
-                <li><button class="no-button" id="logout-button">Logout</button></li>
-                {{else}}
-                <li><a href="/login">Login</a></li>
-                {{/if}}
-            </ul>
-        </div>
-    </header>
-
+        </footer>
+    </div>
+    
     <!-- Render script for logged in user -->
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src="/views/js/logout.js"></script>
     {{/if}} 
 </body>
 </html> 
