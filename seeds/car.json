@@ -6,7 +6,7 @@
     "description": "2015 Toyota Camry with 75000 miles, Black color",
     "category_id": 1,
     "user_id": 1,
-    "image_URL": ""
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271782/Camry_liypyi.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "2018 Honda Civic with 30000 miles, Black color",
     "category_id": 1,
     "user_id": 1,
-    "image_URL": ""
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271790/Civic_wcoyca.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "2012 Ford Mustang with 120000 miles, Red color",
     "category_id": 1,
     "user_id": 1,
-    "image_URL": ""
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Mustang_vqo7tv.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "Toyota Tocoma 2022 with 50000 miles, White color",
     "category_id": 3,
     "user_id": 1,
-    "image_URL": ""
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Tacoma_jraklv.png"
   },
   {
     "id": 5,
@@ -42,6 +42,6 @@
     "description": "Honda CR-V 2024 with 10000 miles, Gray color",
     "category_id": 2,
     "user_id": 1,
-    "image_URL": ""
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/CR-V_azmgtb.png"
   }
 ]
