@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Toyota Camry 2015",
+    "category": "Sedan",
+    "price": 15000.00,
+    "description": "2015 Toyota Camry with 75000 miles, Silver color",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Honda Civic 2018",
+    "category": "Compact",
+    "price": 20000.00,
+    "description": "2018 Honda Civic with 30000 miles, Black color",
+    "user_id": 1
+  },
+  {
+    "id": 3,
+    "title": "Ford Mustang 2012",
+    "category": "Sports",
+    "price": 18000.00,
+    "description": "2012 Ford Mustang with 120000 miles, Red color",
+    "user_id": 1
+  },
+  {
+    "id": 4,
+    "title": "Nissan Altima 2016",
+    "category": "Sedan",
+    "price": 22000.00,
+    "description": "2016 Nissan Altima with 50000 miles, White color",
+    "user_id": 1
+  },
+  {
+    "id": 5,
+    "title": "BMW 328i 2019",
+    "category": "Sedan",
+    "price": 35000.00,
+    "description": "2019 BMW 328i with 10000 miles, Gray color",
+    "user_id": 1
+  }
+]
