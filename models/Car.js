@@ -1,8 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Car extends Model {}
-
 
 Car.init(
   {
@@ -16,25 +15,34 @@ Car.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
-    category: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
-  
+
     description: {
       type: DataTypes.TEXT,
     },
-  
+
+    image_URL: {
+      type: DataTypes.STRING,
+    },
+
+    category_id: {
+      type: DataTypes.STRING,
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
+
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
@@ -43,9 +51,8 @@ Car.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'car',
+    modelName: "car",
   }
 );
 
 module.exports = Car;
-
