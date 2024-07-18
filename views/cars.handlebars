@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <p>Created by: {{user.name}} on {{format_date date_created}}</p>
+    <p>
+        <span for="image">
+            <img src="{{image}}" alt="car image">
+        </span>
+    </p>
+    <h4>Leave a comment!</h4>
+    <div class="card">
+        <div class="card-content">
+            <div class="field">
+                <div class="control">
+                    <textarea class="textarea" placeholder="Enter your comment"></textarea>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
