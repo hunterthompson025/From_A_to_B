@@ -1,4 +1,3 @@
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -11,25 +10,28 @@ Comment.init({
         autoIncrement: true
       },
       comment_text: {
-        type: DataTypes.STRING
+        type: DataTypes.TEXT,
+        allowNull: false,
       },
       car_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'Car',
+          model: 'car',
           key: 'id'
         }
       },
       user_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'User',
+          model: 'user',
           key: 'id'
         }
       }
     }, {
       sequelize,
-      modelName: 'Comment'
+      modelName: 'Comment',
+      timestamps: true,
+      underscored: true,
     });
 
     module.exports = Comment;
