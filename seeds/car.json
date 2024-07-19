@@ -4,44 +4,44 @@
     "title": "Toyota Camry 2015",
     "price": 15000.00,
     "description": "2015 Toyota Camry with 75000 miles, Black color",
-    "category_id": 1,
     "user_id": 1,
-    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271782/Camry_liypyi.png"
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271782/Camry_liypyi.png",
+    "date_created": "05/03/2024"
   },
   {
     "id": 2,
     "title": "Honda Civic 2018",
     "price": 20000.00,
     "description": "2018 Honda Civic with 30000 miles, Black color",
-    "category_id": 1,
     "user_id": 1,
-    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271790/Civic_wcoyca.png"
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271790/Civic_wcoyca.png",
+    "date_created": "05/01/2024"
   },
   {
     "id": 3,
     "title": "Ford Mustang 2012",
     "price": 18000.00,
     "description": "2012 Ford Mustang with 120000 miles, Red color",
-    "category_id": 1,
     "user_id": 1,
-    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Mustang_vqo7tv.png"
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Mustang_vqo7tv.png",
+    "date_created": "05/02/2024"
   },
   {
     "id": 4,
     "title": "Toyota Tocoma 2022",
     "price": 22000.00,
     "description": "Toyota Tocoma 2022 with 50000 miles, White color",
-    "category_id": 3,
     "user_id": 1,
-    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Tacoma_jraklv.png"
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/Tacoma_jraklv.png",
+    "date_created": "05/07/2024"
   },
   {
     "id": 5,
     "title": "Honda CR-V 2024", 
     "price": 35000.00,
     "description": "Honda CR-V 2024 with 10000 miles, Gray color",
-    "category_id": 2,
     "user_id": 1,
-    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/CR-V_azmgtb.png"
+    "image_URL": "https://res.cloudinary.com/dpv2zdltl/image/upload/v1721271791/CR-V_azmgtb.png",
+    "date_created": "05/10/2024"
   }
 ]

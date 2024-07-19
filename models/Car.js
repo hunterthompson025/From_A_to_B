@@ -28,15 +28,11 @@ Car.init(
     image_URL: {
       type: DataTypes.STRING,
     },
-
-    category_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "category",
-        key: "id",
-      },
+    date_created:{
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {
