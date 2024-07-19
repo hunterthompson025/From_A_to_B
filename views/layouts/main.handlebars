@@ -22,6 +22,7 @@
                             <a class="navbar-item mx-5" href="/home">
                                 <img src="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png" alt="pepe">
                             </a>
+                            <p class="navbar-item mx-2">From A to B</p>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -29,13 +30,9 @@
                         </div>
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item is-active" href="/home">Home</a>
-                            <a class="navbar-item" href="/cars">Cars</a>
-                            <a class="navbar-item" href="/trucks">Trucks</a>
-                            <a class="navbar-item" href="/suvs">SUVs</a>
+                            <a class="navbar-item" href="/home">Home</a>
                             <!-- Render login or logout links -->
                             {{#if logged_in}}
-                            <a class="navbar-item" href="/profile">Profile</a>
                             <a class="navbar-item" href="/logout" id="logout">Logout</a>
                             {{else}}
                             <a class="navbar-item" href="/login" id="login">Login</a>
