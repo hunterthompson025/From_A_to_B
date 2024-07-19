@@ -10,16 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const newComment = async (carId, commentContent) => {
     const response = await fetch(`/api/cars/${carId}/comments`, {
       // Adjusted the URL for comments endpoint
-
       method: "POST",
-
       headers: {
         "Content-Type": "application/json",
       },
-
       body: JSON.stringify({ comment_text: commentContent }),
     });
-
     return response;
   };
 
@@ -31,35 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (commentContent) {
       try {
         const response = await newComment(carId, commentContent);
-
         if (!response.ok) {
           throw new Error("Failed to add comment");
         }
-
         const newCommentData = await response.json();
-
         // Clear the textarea
-
         commentText.value = "";
-
         // Render the new comment
-
         const commentHTML = `
-
                     <div class="comment">
-
                         <p>${newCommentData.comment_text}</p>
-
                         <p><small>Posted by ${newCommentData.user.name} on ${new Date(newCommentData.createdAt).toLocaleDateString()}</small></p>
-
                     </div>
-
                 `;
-
         commentsContainer.innerHTML += commentHTML;
       } catch (error) {
         console.error("Error adding comment:", error);
-
         // Handle error display or logging as needed
       }
     }

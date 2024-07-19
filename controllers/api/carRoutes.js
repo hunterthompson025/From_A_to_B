@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-
           attributes: ["name"],
         },
       ],
@@ -20,7 +19,6 @@ router.get("/", async (req, res) => {
 
     res.render("homepage", {
       cars,
-
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -34,13 +32,11 @@ router.get("/:id", async (req, res) => {
       include: [
         {
           model: User,
-
           attributes: ["name"],
         },
 
         {
           model: Comment,
-
           include: [User],
         },
       ],

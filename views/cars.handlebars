@@ -9,36 +9,26 @@
             <p class="title is-4">{{title}}</p>
             <p class="subtitle is-6">Created by: {{user.name}} on {{format_date date_created}}</p>
             <p>{{description}}</p>
-            <p>
-                <a href="/cars/{{id}}">View more</a>
-            </p>
         </div>
     </div>
 </article>
-
-{{#each comments as |comment|}}
-<article class="media">
-    <div class="media-content">
-        <div class="content">
-            <p>
-                <strong>{{user.name}}</strong>
-                <br>
-                {{comment}}
-            </p>
-        </div>
+<div id="comments-container">
+  {{#each comments}}
+    <div class="comment">
+      <p>{{this.comment_text}}</p>
+      <p><small>Posted by {{this.user.name}} on {{format_date this.createdAt}}</small></p>
     </div>
-</article>
-{{/each}}
-
+  {{/each}}
+</div>
 <article class="container">
     <div class="field">
         <p class="control">
-            <textarea class="textarea" placeholder="Enter your comment"></textarea>
+            <textarea class="textarea" id="comment-text" placeholder="Enter your comment"></textarea>
         </p>
     </div>
     <div class="field">
         <p class="control">
-            <button class="button is-link">Post Comment</button>
+            <button class="button is-link" id="submit-comment">Post Comment</button>
         </p>
     </div>
 </article>
