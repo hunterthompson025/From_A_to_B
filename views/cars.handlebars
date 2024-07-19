@@ -16,14 +16,6 @@
     </article>
 </div>
 
-<div id="comments-container">
-  {{#each comments}}
-    <div class="comment">
-      <p>{{this.comment_text}}</p>
-      <p><small>Posted by {{this.user.name}} on {{format_date this.createdAt}}</small></p>
-    </div>
-  {{/each}}
-</div>
 <article class="container">
     <div class="field">
         <p class="control">
@@ -35,5 +27,14 @@
             <button class="button is-link" id="submit-comment">Post Comment</button>
         </p>
     </div>
+
+  <div id="comments-container">
+    {{#each comments}}
+      <div class="comment">
+        <p>{{this.comment_text}}</p>
+        <p><small>Posted by {{this.user.name}} on {{format_date this.createdAt}}</small></p>
+      </div>
+    {{/each}}
+  </div>
 </article>
 <script src="/js/comment.js"></script>
