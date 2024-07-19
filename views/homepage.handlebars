@@ -1,4 +1,4 @@
-{{#each car as |car|}}
+{{#each cars as |car|}}
 
 <div class="media">
     <div class="media-left">
@@ -8,8 +8,8 @@
     </div>
     <div class="media-content">
         <div class="content">
-            <p class="title is-4"><a href="/cars/{{car.id}}">{{car.title}}</a></p>
-            <p class="subtitle is-6">Created by: {{car.username}} on {{format_date post.date_created}}</p>
+            <p class="title is-4"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
+            <p class="subtitle is-6">Created by: {{car.username}} on {{format_date car.date_created}}</p>
         </div>
     </div>
     <div class="content">
