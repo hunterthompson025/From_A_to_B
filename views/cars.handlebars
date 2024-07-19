@@ -1,17 +1,20 @@
-<article class="card">
-    <div class="card-image">
-        <figure class="image">
-            <img src="{{image_URL}}" alt="Placeholder image">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="content">
-            <p class="title is-4">{{title}}</p>
-            <p class="subtitle is-6">Created by: {{user.name}} on {{format_date date_created}}</p>
-            <p class="is-size-5">{{description}}</p>
+<div class="section column is-full">
+    <article class="card">
+        <div class="card-image">
+            <figure class="image">
+                <img src="{{image_URL}}" alt="Placeholder image">
+            </figure>
         </div>
-    </div>
-</article>
+        <div class="card-content">
+            <div class="content">
+                <p class="title is-4">{{title}}</p>
+                <p class="subtitle is-6">Created by: {{user.name}} on {{format_date date_created}}</p>
+                <p class="is-size-5">{{description}}</p>
+            </div>
+        </div>
+    </article>
+</div>
+
 <div id="comments-container">
   {{#each comments}}
     <div class="comment">
