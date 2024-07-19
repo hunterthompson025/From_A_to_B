@@ -1,21 +1,22 @@
-{{#each car as |car|}}
+{{#each cars as |car|}}
 
-<div class="media">
-    <div class="media-left">
-        <figure class="image is-64x64">
-            <img src="{{car.image}}" alt="Placeholder image">
-        </figure>
-    </div>
-    <div class="media-content">
-        <div class="content">
-            <p class="title is-4"><a href="/cars/{{car.id}}">{{car.title}}</a></p>
-            <p class="subtitle is-6">Created by: {{car.username}} on {{format_date post.date_created}}</p>
+<div class="section">
+    <div class="container">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="{{car.image_URL}}" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p class="title is-4"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
+                    <p class="subtitle is-6">Created by: {{car.username}} on {{format_date car.date_created}}</p>
+                    <p class="is-size-6">{{car.description}}</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <div class="is-flex is-justify-content-space-between">
-            <p class="is-size-5">{{car.description}}</p>
-    </div>
-</div> 
+</div>
 
 {{/each}}
