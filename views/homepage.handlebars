@@ -1,7 +1,7 @@
 {{#each cars as |car|}}
 
-<div class="column is-fluid">
-    <div class="container">
+<div class="column is-fluid is-12">
+    <div class="container mb-4">
         <div class="media">
             <div class="media-left">
                 <figure class="image is-128x128">
@@ -10,9 +10,9 @@
             </div>
             <div class="media-content">
                 <div class="content">
-                    <p class="title is-4"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
+                    <p class="title is-12"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
                     <p class="subtitle is-6">Created by: {{car.username}} on {{format_date car.date_created}}</p>
-                    <p class="is-size-6">{{car.description}}</p>
+                    <p class="is-size-12">{{car.description}}</p>
                 </div>
             </div>
         </div>
