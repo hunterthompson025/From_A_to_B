@@ -9,13 +9,13 @@
         <div class="card-content">
             <div class="content">
                 <p class="title is-4">{{title}}</p>
-                <p class="subtitle is-6">Created by: {{user.name}} on {{format_date date_created}}</p>
+                <p class="subtitle is-6">Posted by: {{user.name}} on {{format_date date_created}}</p>
                 <p class="is-size-5">{{description}}</p>
             </div>
         </div>
     </article>
 </div>
-
+{{#if logged_in}}
 <article class="container">
     <div class="field">
         <p class="control">
@@ -28,13 +28,15 @@
         </p>
     </div>
 
-  <div id="comments-container">
-    {{#each comments}}
-      <div class="comment">
-        <p>{{this.comment_text}}</p>
-        <p><small>Posted by {{this.user.name}} on {{format_date this.createdAt}}</small></p>
-      </div>
-    {{/each}}
-  </div>
+    <div id="comments-container">
+        {{#each comments}}
+        <div class="comment">
+            <p>{{this.comment_text}}</p>
+            <p><small>Posted by {{this.user.name}} on {{format_date this.createdAt}}</small></p>
+        </div>
+        {{/each}}
+    </div>
 </article>
 <script src="/js/comment.js"></script>
+<script src="/js/logout.js"></script>
+{{/if}}
