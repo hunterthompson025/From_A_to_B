@@ -74,18 +74,18 @@ Provide instructions and examples for using your project. This can include code 
 
 ## API Endpoints
 
-### Car Routes
+### Car Routes (/cars)
 
 - `GET /`: Get all cars
 - `GET /:id`: Get a specific car by ID
 - `GET /:id/comments`: Post to add a comment to a car post
 
-### Users
+### User Routes (/users)
 
-- `GET /users`: Get all users
-- `GET /users/:id`: Get a user by ID
-- `PUT /users/:id`: Update a user
-- `DELETE /users/:id`: Delete a user
+- `GET /`: Get all users
+- `POST /`: Create a new user
+- `POST /login`: Login
+- `POST /logout`: Logout
 
 ### Example Endpoint
 
@@ -109,20 +109,35 @@ curl -X GET http://localhost:3000/example
 
 ## Database Schema
 
-### Users Table
+### 'Car' Model
 
-| Column      | Data Type | Constraints           |
-|-------------|-----------|-----------------------|
-| id          | INTEGER   | PRIMARY KEY, AUTO_INCREMENT |
-| username    | STRING    | NOT NULL, UNIQUE      |
-| email       | STRING    | NOT NULL, UNIQUE      |
-| password    | STRING    | NOT NULL              |
-| createdAt   | DATE      | NOT NULL              |
-| updatedAt   | DATE      | NOT NULL              |
+| Column      | Data Type | Constraints                              |
+|-------------|-----------|------------------------------------------|
+| id          | INTEGER   | PRIMARY KEY, AUTO_INCREMENT              |
+| title       | STRING    | NOT NULL                                 |
+| price       | DECIMAL   | NOT NULL                                 |
+| description | TEXT      | NOT NULL                                 |
+| image_URL   | STRING    |                                          |
+| date_created| DATE      | NOT NULL                                 |
+| user_id     | DATE      | NOT NULL, FOREIGN KEY REFERENCES user(id)|
 
-### Other Tables
+### 'User' Model
 
-- Describe other tables and their schemas here.
+| Column      | Data Type | Constraints                            |
+|-------------|-----------|----------------------------------------|
+| id          | INTEGER   | PRIMARY KEY, AUTO_INCREMENT            |
+| name        | STRING    | NOT NULL                               |
+| email       | STRING    | NOT NULL, UNIQUE, must be an email     |
+| password    | STRING    | NOT NULL, must be at least 8 chars long|
+
+### 'Comment' Model
+
+| Column      | Data Type | Constraints                             |
+|-------------|-----------|-----------------------------------------|
+| id          | INTEGER   | PRIMARY KEY, AUTO_INCREMENT             |
+| comment_text| TEXT      | NOT NULL                                |
+| car_id      | STRING    | NOT NULL, FOREIGN KEY REFERENCES car(id)|
+| user_id     | STRING    | NOT NULL, FOREIGN KEY REFERENCES car(id)|
 
 ## Contributing
 
@@ -143,7 +158,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub**: [yourusername](https://github.com/yourusername)
 
 Feel free to reach out if you have any questions or need further assistance!
-
----
-
-Replace placeholder text with actual project details. Add additional sections as needed.
