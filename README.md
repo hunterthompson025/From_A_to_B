@@ -66,6 +66,10 @@ The server should now be running at `http://localhost:3001`.
 
 ## Usage
 
+Homepage
+
+
+
 ## Features
 
 - Users can create accounts.
