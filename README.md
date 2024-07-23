@@ -1,6 +1,6 @@
-# Project Title
+# From A to B
 
-Brief description of what your project does.
+A used car eCommerce site where users can login and browse posts for cars that are for sale and comment on the posts.
 
 ## Table of Contents
 
@@ -19,6 +19,12 @@ Brief description of what your project does.
 
 - Node.js
 - PostgreSQL
+- Sequelize
+- Cloudinary
+- Handlebars.js
+- Express.js (express-session)
+- dotenv
+- Bcrypt
 
 ### Clone the Repository
 
@@ -38,20 +44,16 @@ npm install
 Create a `.env` file in the root directory and add the following:
 
 ```
-DATABASE_URL=postgres://username:password@localhost:5432/your-database
-SECRET_KEY=your_secret_key
+DB_NAME='name_of_db'
+DB_USER='db_user'
+DB_PASSWORD='db_password'
+SECRET='secret_key'
 ```
 
-### Run Database Migrations
+### Seed the Database
 
 ```bash
-npx sequelize-cli db:migrate
-```
-
-### Seed the Database (optional)
-
-```bash
-npx sequelize-cli db:seed:all
+npm run seed
 ```
 
 ### Start the Server
@@ -60,27 +62,24 @@ npx sequelize-cli db:seed:all
 npm start
 ```
 
-The server should now be running at `http://localhost:3000`.
+The server should now be running at `http://localhost:3001`.
 
 ## Usage
 
-Provide instructions and examples for using your project. This can include code snippets or screenshots.
-
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Users can create accounts.
+- Users can comment on car posts.
 
 ## API Endpoints
 
-### Car Routes (/cars)
+### Car Routes (/api/cars)
 
 - `GET /`: Get all cars
 - `GET /:id`: Get a specific car by ID
 - `GET /:id/comments`: Post to add a comment to a car post
 
-### User Routes (/users)
+### User Routes (/api/users)
 
 - `GET /`: Get all users
 - `POST /`: Create a new user
@@ -93,18 +92,10 @@ Provide instructions and examples for using your project. This can include code 
 GET /example
 ```
 
-#### Request
+#### Request to Get All Cars
 
 ```bash
-curl -X GET http://localhost:3000/example
-```
-
-#### Response
-
-```json
-{
-  "data": "example response"
-}
+curl -X GET http://localhost:3001/api/cars
 ```
 
 ## Database Schema
