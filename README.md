@@ -68,7 +68,7 @@ The server should now be running at `http://localhost:3001`.
 
 Homepage
 
-
+![Homepage](public/images/homepage.png)
 
 ## Features
 
