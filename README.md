@@ -23,7 +23,7 @@ Brief description of what your project does.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/hunterthompson025/From_A_to_B.git
 cd your-repo
 ```
 
@@ -74,10 +74,11 @@ Provide instructions and examples for using your project. This can include code 
 
 ## API Endpoints
 
-### Authentication
+### Car Routes
 
-- `POST /login`: Authenticate a user
-- `POST /register`: Register a new user
+- `GET /`: Get all cars
+- `GET /:id`: Get a specific car by ID
+- `GET /:id/comments`: Post to add a comment to a car post
 
 ### Users
 
