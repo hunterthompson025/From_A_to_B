@@ -1,20 +1,14 @@
 {{#each cars as |car|}}
 
 <div class="column is-fluid is-12">
-    <div class="container mb-4">
-        <div class="media">
-            <div class="media-left">
-                <figure class="image is-128x128">
-                    <img src="{{car.image_URL}}" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p class="title is-12"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
-                    <p class="subtitle is-6">Created by: {{car.username}} on {{format_date car.date_created}}</p>
-                    <p class="is-size-12">{{car.description}}</p>
-                </div>
-            </div>
+    <div class="columns">
+        <div class="column is-4">
+            <img class="image" src="{{car.image_URL}}" alt="Placeholder image">
+        </div>
+        <div class="column is-8">
+            <p class="title is-size-4 mb-6"><a href="/api/cars/{{car.id}}">{{car.title}}</a></p>
+            <p class="subtitle is-size-8">Posted by: {{car.user.name}} on {{format_date car.date_created}}</p>
+            <p class="is-size-12">{{car.description}}</p>
         </div>
     </div>
 </div>
